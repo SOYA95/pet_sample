@@ -29,6 +29,9 @@ insert샘플: insert into payment (amount, pay_date, refund_date, reserved_id, u
 
 3) Shop에서 message 받아와 저장 ( 아래 PloycyHandler.java가 실행됨 )
 
+
+
+---------------------------------------------------
 @Service
 public class PolicyHandler{
     @StreamListener(KafkaProcessor.INPUT)
