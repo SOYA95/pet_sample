@@ -36,11 +36,11 @@ insert샘플: insert into payment (amount, pay_date, refund_date, reserved_id, u
 public class PolicyHandler{
     @StreamListener(KafkaProcessor.INPUT)
     public void onStringEventListener(@Payload String eventString){
-    }
-   
+    }   
+    
     @Autowired
     ShopRepository shopRepository;
-
+    
     @StreamListener(KafkaProcessor.INPUT)
     public void wheneverPayed_(@Payload Payed payed){
     	if(payed.isMe()){
